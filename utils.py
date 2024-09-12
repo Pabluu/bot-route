@@ -1,14 +1,12 @@
 from openpyxl import load_workbook
 from address import address_remove
 
-def path_file_XLSX(file):
+def path_project():
   from pathlib import Path
-  current = Path().resolve()
-
-  return f'{current}/{file}'
+  return Path(__file__).parent.absolute()
 
 def load_file(filename: str):
-  # file = path_file_XLSX(filename)
+  # file = path_project(filename)
 
   workbook = load_workbook(filename)
   worksheet = workbook.active

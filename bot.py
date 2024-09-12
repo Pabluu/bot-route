@@ -1,4 +1,5 @@
-from os import getenv, path, getcwd
+from os import getenv, path
+from utils import path_project
 from  shutil import rmtree
 from dotenv import load_dotenv
 from uvloop import install
@@ -42,11 +43,12 @@ async def document(client, message):
 
     await message.reply('**Aguarde**', quote=True)
     document_path = await message.download()
+        
     processed_file = Main(document_path)
-    
     await client.send_document(chat_id=message.chat.id, document=processed_file)
 
-    rmtree(f'{getcwd()}/downloads/')
+    path_to_delet = f'{path_project()}/downloads/'    
+    rmtree(path_to_delet)
 
   except Exception as error:
     print(error)
