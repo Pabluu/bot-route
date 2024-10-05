@@ -276,3 +276,17 @@ def formatDateFile():
     day += '-feira'
 
   return f'{day}.xlsx'
+
+
+def permitionUser(idUser):
+  with open('users.txt', 'r') as file:
+    while True:
+      user = file.readline().replace('\n', '')
+      
+      if user:
+        if user == idUser:
+          return True
+        
+        continue
+        
+      return False

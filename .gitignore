@@ -2,3 +2,6 @@
 *.xlsx
 .vscode/
 *.session*
+lib/
+bin/
+__pycache__

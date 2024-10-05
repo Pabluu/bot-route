@@ -1,2 +1,2 @@
 # TODO: Modify this Procfile to fit your needs
-web: python bot.py --timeout 60
+web: gunicorn bot:app

@@ -1,5 +1,5 @@
 from os import getenv, path
-from utils import path_project
+from utils import path_project, permitionUser
 from  shutil import rmtree
 from dotenv import load_dotenv
 from uvloop import install
@@ -13,7 +13,8 @@ app = Client(
   'route_bot',
   api_id=getenv('TELEGRAM_API_ID'),
   api_hash=getenv('TELEGRAM_API_HASH'),
-  bot_token=getenv('TELEGRAM_BOT_TOKEN')
+  bot_token=getenv('TELEGRAM_BOT_TOKEN'),
+  timeout=10
 )
 
 def log_info_user(message):
@@ -34,6 +35,9 @@ Telefone: {user.phone_number}
 async def document(client, message):
   try:
     log_info_user(message)
+    user_id = message.from_user.id
+
+    permitionUser(user_id)
     
     file_name = message.document.file_name
     file_extension = path.splitext(file_name)[1]
