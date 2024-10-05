@@ -1,7 +1,12 @@
 .env
+<<<<<<< HEAD
 *.xlsx
 .vscode/
 *.session*
 lib/
 bin/
 __pycache__
+=======
+*.session
+*.xlsx
+>>>>>>> refs/remotes/origin/main

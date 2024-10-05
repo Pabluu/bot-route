@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 # fly.toml app configuration file generated for route on 2024-09-12T00:33:58-03:00
+=======
+# fly.toml app configuration file generated for route-bot on 2024-09-11T21:43:01-03:00
+>>>>>>> refs/remotes/origin/main
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
+<<<<<<< HEAD
 app = 'route'
+=======
+app = 'route-bot'
+>>>>>>> refs/remotes/origin/main
 primary_region = 'gig'
 
 [build]

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "route"
+version = "0.1.0"
+description = ""
+authors = ["Pablo HSC"]
+
+[tool.poetry.dependencies]
+python = "3.10"
+pyrogram = "2.0.106"
+python-dotenv = "1.0.1"
+tgcrypto = "1.2.5"
+uvloop = "0.20.0"
+openpyxl = "3.1.5"
+pytz = "2024.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
